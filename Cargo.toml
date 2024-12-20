@@ -1,0 +1,18 @@
+[package]
+name = "cuda-cmp"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+cudarc = { version = "0.12.2", features = ["cuda-12060"] }
+
+[dev-dependencies]
+criterion = { version = "0.5", features = ["html_reports"] }
+
+[[bench]]
+name = "copy_process"
+harness = false
+
+[[bench]]
+name = "just_copy"
+harness = false
